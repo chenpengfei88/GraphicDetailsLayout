@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/holo_red_dark"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:layout_width="15dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="材质成分: 羊毛100%销售渠道类型: 纯电商(只在线上销售)品牌: Bool/芭欧货号: BY3050服装版型: 直筒风格: 通勤通勤: 韩版衣长: 中长款袖长: 长袖领子: 西装领袖型: 常规衣门襟: 暗扣图案: 纯色流行元素/工艺: 口袋适用年龄: 30-34周岁上市年份季节: 2015年夏季颜色分类: 藕粉 罂粟红 驼色 橄榄绿 草绿 衣玫红尺码: S M L XL"/>
+
+</LinearLayout>
