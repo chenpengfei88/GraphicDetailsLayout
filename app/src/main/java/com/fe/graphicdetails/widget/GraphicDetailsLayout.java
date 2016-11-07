@@ -46,6 +46,15 @@ public class GraphicDetailsLayout extends LinearLayout {
         init(context);
     }
 
+    @Override
+    public boolean dispatchTouchEvent(MotionEvent ev) {
+        switch (ev.getAction()) {
+            case MotionEvent.ACTION_DOWN:
+                mIntercept = false;
+                break;
+        }
+        return super.dispatchTouchEvent(ev);
+    }
 
     private void init(Context context) {
         mTouchSlop = ViewConfiguration.get(context).getScaledTouchSlop();

@@ -7,7 +7,8 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.util.AttributeSet;
-import android.view.ViewGroup;
+import android.view.MotionEvent;
+import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
 
@@ -73,20 +74,24 @@ public class GDScrollView extends ScrollView {
         if(getTag().equals(TAG_ONE)) {
             //上面的界面滚动到底部的时候
             if(isScrollBottom()) {
-                getParent().requestDisallowInterceptTouchEvent(false);
-                if(mScrollListener != null) mScrollListener.scrollBottom(true, TAG_ONE);
+                criticalPointOperation(false, true, TAG_ONE);
             }
         }
 
         if(getTag().equals(TAG_TWO)) {
             if(getScrollY() <= 0) {
-                getParent().requestDisallowInterceptTouchEvent(false);
-                if(mScrollListener != null) mScrollListener.scrollBottom(true, TAG_TWO);
+                criticalPointOperation(false, true, TAG_TWO);
             }
         }
+    }
+
+    private void criticalPointOperation(boolean allow, boolean intercept, String tag) {
+        getParent().requestDisallowInterceptTouchEvent(allow);
+        if(mScrollListener != null) mScrollListener.scrollBottom(intercept, tag);
     }
 
     public boolean isScrollBottom() {
         return getScrollY() >= (mLlHeight - getMeasuredHeight());
     }
+
 }
