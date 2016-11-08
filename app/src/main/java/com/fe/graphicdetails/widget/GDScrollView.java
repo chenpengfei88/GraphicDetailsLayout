@@ -7,8 +7,6 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.util.AttributeSet;
-import android.view.MotionEvent;
-import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
 
@@ -79,6 +77,7 @@ public class GDScrollView extends ScrollView {
         }
 
         if(getTag().equals(TAG_TWO)) {
+            //下面的界面滚动到顶部的时候
             if(getScrollY() <= 0) {
                 criticalPointOperation(false, true, TAG_TWO);
             }

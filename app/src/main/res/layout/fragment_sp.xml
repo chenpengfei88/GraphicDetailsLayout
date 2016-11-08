@@ -8,7 +8,8 @@
     <ImageView
         android:id="@+id/logo"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"/>
 
     <TextView
         android:layout_width="15dp"
@@ -17,8 +18,9 @@
         android:text="芭欧2016新款秋冬双面呢修身长袖纯色毛呢外套中长款羊毛呢子大衣, 经典廓型设 纯手工工艺 平整的走线 精工细作"/>
 
     <TextView
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="30dp"
+        android:layout_gravity="center_horizontal"
         android:text="------------------------继续拖动，查看图文详情-------------------"/>
 
 </LinearLayout>
